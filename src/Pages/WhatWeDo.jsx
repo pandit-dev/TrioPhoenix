@@ -79,7 +79,7 @@ const WhatWeDo = () => {
           </motion.h2>
           <motion.p
             className="mt-4 text-gray-800"
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 3 }}
           >

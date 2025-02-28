@@ -115,7 +115,7 @@ const Packages = () => {
           <motion.div
             ref={sub12Ref}
             className="border-4 border-white py-28 rounded-lg"
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 20 }}
             animate={is12SubView ? { opacity: 1, x: 0 } : {}}
             transition={{ type: "spring", bounce: 0.6, duration: 4 }}
           >
