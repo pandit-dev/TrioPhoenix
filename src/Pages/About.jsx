@@ -16,9 +16,10 @@ const About = () => {
         />
 
         {/* Right Side: Content */}
-        <div
+        <motion.div
           ref={ref}
           className="md:absolute flex flex-col md:ml-[58%] md:mt-[30%] md:w-1/2 bg-white md:opacity-70 pt-10 pb-16 px-10 mb-4"
+          whileHover={{scale:1.1, boxShadow:"0px 0px 15px rgb(252, 5, 5)"}}
         >
           <motion.h2
             className="md:text-4xl text-3xl font-bold text-center"
@@ -40,7 +41,7 @@ const About = () => {
             propelling your brand to new heights with tailored strategies and
             creative brilliance.
           </motion.p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

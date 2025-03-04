@@ -7,6 +7,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { MdEmail, MdLocationOn } from "react-icons/md";
+import { motion } from "motion/react";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -101,9 +102,11 @@ export default function Navbar() {
 
         {/* Contact Button (Hidden on Mobile) */}
         <a href="#contact" className="hidden md:block">
-          <button className="bg-red-600 text-white px-5 py-2 rounded-md font-medium hover:bg-red-700">
+          <motion.button className="bg-red-600 text-white px-5 py-2 rounded-md font-medium"
+          whileHover={{scale:1.1, boxShadow:"0px 0px 15px rgb(252, 5, 5)"}}
+          >
             CONTACT NOW
-          </button>
+          </motion.button>
         </a>
       </nav>
     </>

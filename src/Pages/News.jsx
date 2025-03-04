@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 
 const newsData = [
   {
@@ -49,9 +50,16 @@ const News = () => {
         ))}
       </div>
 
-      <button className="mt-12 px-6 py-2 border border-red-500 text-red-500 font-semibold rounded-md hover:bg-red-500 hover:text-white transition">
+      <motion.button
+        whileHover={{
+          scale: 1.2,
+          textShadow: "0px 0px 15px rgb(245, 18, 10)",
+          boxShadow: "0px 0px 10px rgb(245, 18, 10)",
+        }}
+        className="mt-12 px-6 py-2 border border-red-500 text-red-500 font-semibold rounded-md"
+      >
         See More
-      </button>
+      </motion.button>
     </section>
   );
 };

@@ -31,10 +31,9 @@ const Home = () => {
         <div className="z-10 w-full px-4 md:px-16 lg:px-32 flex md:mt-0 mt-36 md:items-center h-full">
           <div className="w-full md:w-2/3 lg:w-1/2 md:text-left relative">
             <motion.p
-              className="text-red-500 text-sm md:text-base uppercase"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 2 }}
+              className="text-red-500 text-base md:text-xl font-medium uppercase"
+              transition={{ type:"spring", bounce:0.7}}
+              whileHover={{scale:1.1, originX:0, textShadow:"0px 0px 30px rgb(252, 5, 5)"}}
             >
               Welcome to Triophoenix
             </motion.p>
@@ -58,14 +57,14 @@ const Home = () => {
               )}
             </motion.h1>
 
-            <a
+            <motion.a
               href="#contact"
-              className="mt-6 inline-block bg-red-500 text-white px-6 py-3 rounded-md 
-              hover:bg-red-600 hover:scale-105 transition-all duration-300 
-              shadow-md hover:shadow-lg"
+              className="mt-6 inline-block bg-red-500 text-white px-6 py-3 rounded-md       
+              shadow-md "
+              whileHover={{scale:1.1, boxShadow:"0px 0px 15px rgb(252, 5, 5)"}}
             >
               Contact Now
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>

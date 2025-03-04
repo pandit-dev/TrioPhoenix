@@ -141,9 +141,10 @@ const ServiceCard = ({ service, index }) => {
       className="bg-blue-50 py-16 px-14 rounded-md shadow-sm border border-gray-200 flex flex-col items-center"
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
+      whileHover={{scale:1.01, boxShadow:"0px 0px 10px rgb(209, 105, 105)"}}
+
       transition={{
-        duration: 2,
-        delay: index * 0.1,
+        duration: 2,        
         type: "spring",
         bounce: 0.6,
       }}

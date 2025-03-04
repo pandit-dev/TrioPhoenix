@@ -1,5 +1,6 @@
 import React from "react";
 import { MdCall, MdEmail, MdLocationOn } from "react-icons/md";
+import { motion } from "motion/react";
 
 const ContactUs = () => {
   return (
@@ -114,9 +115,16 @@ const ContactUs = () => {
               </div>
             </div>
 
-            <button className="hover:w-full md:w-auto px-6 bg-red-500 text-white py-2 rounded-lg hover:bg-green-600 transition">
+            <motion.button
+              whileHover={{
+                scale: 1.1,
+                textShadow: "0px 0px 10px rgb(245, 18, 10)",
+                boxShadow: "0px 0px 10px rgb(245, 18, 10)",
+              }}
+              className="mt-4 px-6 py-2 border border-red-500 text-red-500 font-semibold rounded-xl"
+            >
               Send Message
-            </button>
+            </motion.button>
           </form>
         </div>
       </div>

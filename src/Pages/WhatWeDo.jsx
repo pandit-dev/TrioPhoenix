@@ -65,9 +65,10 @@ const WhatWeDo = () => {
         </div>
 
         {/* Right Section */}
-        <div
+        <motion.div
           ref={ref}
           className="bg-white p-6 border-2 border-red-500 rounded-lg shadow-lg flex flex-col"
+          whileHover={{scale:1.02, boxShadow:"0px 0px 20px rgb(209, 105, 105)"}}
         >
           <motion.h2
             className="text-2xl font-bold text-gray-900 border-b-4 border-red-500 pb-2"
@@ -89,7 +90,7 @@ const WhatWeDo = () => {
             visibility to managing compelling social media campaigns, we're
             dedicated to enhancing your brand's digital footprint.
           </motion.p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

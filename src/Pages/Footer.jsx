@@ -4,8 +4,26 @@ import {
   FaPinterestSquare,
   FaTwitterSquare,
 } from "react-icons/fa";
+import { motion } from "motion/react";
 
 const Footer = () => {
+  const liVariants = {
+    visible: {
+      scale: 1.3,
+      originX: 0,
+      color: "#FF0000",
+      transition: { type: "spring", bounce: 0.6 },
+    },
+  };
+
+  const social = {
+    visible: {
+      scale: 1.3,
+      color: "#FF0000",
+      boxShadow: "0px 0px 10px rgb(245, 18, 10)",
+      transition: { type: "spring", bounce: 0.6 },
+    },
+  };
   return (
     <footer className="bg-blue-50 text-gray-700 py-12 md:pt-40 border-t">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-10 text-sm">
@@ -17,19 +35,24 @@ const Footer = () => {
             Digital Frontier.
           </p>
           {/* Social Icons */}
-          <div className="flex gap-3 mt-4">
-            <span className="hover:text-white hover:bg-red-500">
+
+          <div
+            className="flex gap-3 mt-4"
+            variants={liVariants}
+            whileHover="visible"
+          >
+            <motion.span variants={social} whileHover="visible">
               <FaFacebookSquare size={25} />
-            </span>
-            <span className="hover:text-white hover:bg-red-500">
+            </motion.span>
+            <motion.span variants={social} whileHover="visible">
               <FaTwitterSquare size={25} />
-            </span>
-            <span className="hover:text-white hover:bg-red-500">
+            </motion.span>
+            <motion.span variants={social} whileHover="visible">
               <FaLinkedin size={25} />
-            </span>
-            <span className="hover:text-white hover:bg-red-500">
+            </motion.span>
+            <motion.span variants={social} whileHover="visible">
               <FaPinterestSquare size={25} />
-            </span>
+            </motion.span>
           </div>
         </div>
 
@@ -44,14 +67,9 @@ const Footer = () => {
               { path: "packages", label: "Packages" },
               { path: "contact", label: "Contact Us" },
             ].map(({ path, label }) => (
-              <li key={path}>
-                <a
-                  href={`#${path}`}
-                  className="block text-gray-600 hover:text-red-500 transition-transform duration-300 ease-in-out hover:translate-x-2"
-                >
-                  {label}
-                </a>
-              </li>
+              <motion.li key={path} variants={liVariants} whileHover="visible">
+                <motion.a href={`#${path}`}>{label}</motion.a>
+              </motion.li>
             ))}
           </ul>
         </div>
@@ -67,14 +85,13 @@ const Footer = () => {
               "Android and iOS App",
               "Complete Graphics Branding",
             ].map((service) => (
-              <li key={service}>
-                <a
-                  href="#services"
-                  className="block text-gray-600 hover:text-red-500 transition-transform duration-300 ease-in-out hover:translate-x-2"
-                >
-                  {service}
-                </a>
-              </li>
+              <motion.li
+                key={service}
+                variants={liVariants}
+                whileHover="visible"
+              >
+                <a href="#services">{service}</a>
+              </motion.li>
             ))}
           </ul>
         </div>
@@ -83,24 +100,16 @@ const Footer = () => {
         <div>
           <h3 className="font-bold text-gray-900">Get In Touch</h3>
           <ul className="mt-4 space-y-3">
-            <li>
-              <a
-                href="tel:+919609226464"
-                className="text-gray-600 hover:text-red-500"
-              >
-                +91 (960) 9226464
-              </a>
-            </li>
-            <li>
-              <a
-                href="mailto:info@triophoenix.com"
-                className="text-gray-600 hover:text-red-500"
-              >
-                info@triophoenix.com
-              </a>
-            </li>
+            <motion.li variants={liVariants} whileHover="visible">
+              <a href="tel:+919609226464">+91 (960) 9226464</a>
+            </motion.li>
+            <motion.li variants={liVariants} whileHover="visible">
+              <a href="mailto:info@triophoenix.com">info@triophoenix.com</a>
+            </motion.li>
 
-            <li className="text-gray-600">Patinan, Bagnan Howrah, WB-711303</li>
+            <motion.li variants={liVariants} whileHover="visible">
+              Patinan, Bagnan Howrah, WB-711303
+            </motion.li>
           </ul>
         </div>
       </div>
