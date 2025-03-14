@@ -2,8 +2,8 @@ import express, { urlencoded } from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import path from "path";
+import bodyParser from "body-parser";
 import dotenv from "dotenv";
-import { fileURLToPath } from "url";
 import connectDB from "./utils/db.js";
 
 import authRoutes from "./routes/auth.route.js"
@@ -13,12 +13,11 @@ import sitemapRoutes from "./routes/sitemap.route.js"
 
 dotenv.config({});
 const PORT = process.env.PORT || 5000;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const _dirname = path.resolve();
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors({ origin: "https://triophoenix.onrender.com", credentials: true }));
 
@@ -29,9 +28,9 @@ app.use("/api/admin/sitemap", sitemapRoutes);
 
 
 
-app.use(express.static(path.join(__dirname, "Frontend/dist")))
+app.use(express.static(path.join(_dirname, "/Frontend/dist")))
 app.get('*', (_,res)=>{
-  res.sendFile(path.resolve(__dirname, "Frontend", "dist", "index.html"))
+  res.sendFile(path.resolve(_dirname, "Frontend", "dist", "index.html"))
 })
 
 app.listen(PORT, () => {
