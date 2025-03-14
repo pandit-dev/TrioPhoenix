@@ -55,7 +55,7 @@ const Testimonials = () => {
           {/* Left Arrow */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2  p-3 rounded-full  hover:bg-red-600 hover:text-white"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2  p-3 rounded-full  hover:bg-red-600 hover:text-white cursor-pointer"
           >
             <IoIosArrowBack size={24} />
           </button>
@@ -90,7 +90,7 @@ const Testimonials = () => {
           {/* Right Arrow */}
           <button
             onClick={nextTestimonial}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2  p-3 rounded-full  hover:bg-red-600 hover:text-white"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2  p-3 rounded-full  hover:bg-red-600 hover:text-white cursor-pointer"
           >
             <IoIosArrowForward size={24} />
           </button>

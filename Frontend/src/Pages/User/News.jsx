@@ -18,16 +18,15 @@ const newsData = [
     id: 3,
     title: "Why Video Marketing Services are Essential for Modern Businesses",
     date: "2024-06-14",
-    image: "VMS.webp",
+    image: "/VMS.webp",
   },
 ];
 
 const News = () => {
   return (
-    <section className="py-28 text-center">
-      <h2 className="text-3xl md:text-5xl font-bold ">Our Recent News</h2>
+    <section className="py-10 text-center">
 
-      <div className="grid md:grid-cols-3 gap-6 mt-20 max-w-5xl mx-auto">
+      <div className="grid md:grid-cols-3 gap-6 mt-10 max-w-5xl mx-auto">
         {newsData.map((news) => (
           <div
             key={news.id}
@@ -50,16 +49,7 @@ const News = () => {
         ))}
       </div>
 
-      <motion.button
-        whileHover={{
-          scale: 1.2,
-          textShadow: "0px 0px 15px rgb(245, 18, 10)",
-          boxShadow: "0px 0px 10px rgb(245, 18, 10)",
-        }}
-        className="mt-12 px-6 py-2 border border-red-500 text-red-500 font-semibold rounded-md"
-      >
-        See More
-      </motion.button>
+      
     </section>
   );
 };

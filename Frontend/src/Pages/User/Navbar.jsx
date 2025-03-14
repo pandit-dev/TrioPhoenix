@@ -102,7 +102,7 @@ export default function Navbar() {
 
         {/* Contact Button (Hidden on Mobile) */}
         <a href="#contact" className="hidden md:block">
-          <motion.button className="bg-red-600 text-white px-5 py-2 rounded-md font-medium"
+          <motion.button className="bg-red-600 text-white px-5 py-2 rounded-md font-medium cursor-pointer"
           whileHover={{scale:1.1, boxShadow:"0px 0px 15px rgb(252, 5, 5)"}}
           >
             CONTACT NOW

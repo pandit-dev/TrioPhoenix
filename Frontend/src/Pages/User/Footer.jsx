@@ -11,7 +11,7 @@ const Footer = () => {
     visible: {
       scale: 1.3,
       originX: 0,
-      color: "#FF0000",
+      color: "#ff0000",
       transition: { type: "spring", bounce: 0.6 },
     },
   };
@@ -19,7 +19,7 @@ const Footer = () => {
   const social = {
     visible: {
       scale: 1.3,
-      color: "#FF0000",
+      color: "#ff0000",
       boxShadow: "0px 0px 10px rgb(245, 18, 10)",
       transition: { type: "spring", bounce: 0.6 },
     },
@@ -37,9 +37,7 @@ const Footer = () => {
           {/* Social Icons */}
 
           <div
-            className="flex gap-3 mt-4"
-            variants={liVariants}
-            whileHover="visible"
+            className="flex gap-3 mt-4"            
           >
             <motion.span variants={social} whileHover="visible">
               <FaFacebookSquare size={25} />

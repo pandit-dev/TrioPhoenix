@@ -9,7 +9,7 @@ import News from "./News";
 import ContactUs from "./ContactUs";
 import { motion } from "motion/react";
 
-const Home = () => {
+const HeroSection = () => {
   const [toggle, setToggle] = useState(true);
 
   useEffect(() => {
@@ -32,8 +32,12 @@ const Home = () => {
           <div className="w-full md:w-2/3 lg:w-1/2 md:text-left relative">
             <motion.p
               className="text-red-500 text-base md:text-xl font-medium uppercase"
-              transition={{ type:"spring", bounce:0.7}}
-              whileHover={{scale:1.1, originX:0, textShadow:"0px 0px 30px rgb(252, 5, 5)"}}
+              transition={{ type: "spring", bounce: 0.7 }}
+              whileHover={{
+                scale: 1.1,
+                originX: 0,
+                textShadow: "0px 0px 30px rgb(252, 5, 5)",
+              }}
             >
               Welcome to Triophoenix
             </motion.p>
@@ -61,7 +65,10 @@ const Home = () => {
               href="#contact"
               className="mt-6 inline-block bg-red-500 text-white px-6 py-3 rounded-md       
               shadow-md "
-              whileHover={{scale:1.1, boxShadow:"0px 0px 15px rgb(252, 5, 5)"}}
+              whileHover={{
+                scale: 1.1,
+                boxShadow: "0px 0px 15px rgb(252, 5, 5)",
+              }}
             >
               Contact Now
             </motion.a>
@@ -75,10 +82,25 @@ const Home = () => {
       <Services />
       <GraphicDesignServices />
       <Testimonials />
-      <News />
+      <div className="text-center pb-5">
+        <h2 className="text-3xl md:text-5xl font-bold ">Our Recent News</h2>
+
+        <News />
+        <motion.a
+          href="/blog"
+          whileHover={{
+            scale: 1.2,
+            textShadow: "0px 0px 15px rgb(245, 18, 10)",
+            boxShadow: "0px 0px 10px rgb(245, 18, 10)",
+          }}
+          className="inline-block px-6 py-2 border border-red-500 text-red-500 text-center font-semibold rounded-md"
+        >
+          See More
+        </motion.a>
+      </div>
       <ContactUs />
     </>
   );
 };
 
-export default Home;
+export default HeroSection;
