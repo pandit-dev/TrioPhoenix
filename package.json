@@ -8,7 +8,7 @@
     "build": "npm install && npm install --prefix Frontend && npm run build --prefix Frontend",
     "start": "node Backend/index.js"
   },
-  "author": "",
+  "author": "Atanu Pandit",
   "license": "ISC",
   "description": "",
   "dependencies": {
